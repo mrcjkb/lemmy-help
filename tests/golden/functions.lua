@@ -64,4 +64,15 @@ function U.foo.baz()
     return U.foo:bar()
 end
 
+---Method with long name and signature just below tag spillover length
+function U.very_long_function_name____________() end
+---Method with long name and signature just above tag spillover length
+function U.very_long_function_name_____________() end
+---Method with long param and signature just below tag spillover length
+---@param long_param_name______________ string
+function U.short_function_name1(long_param_name______________) end
+---Method with long param and signature just above tag spillover length
+---@param long_param_name_______________ string
+function U.short_function_name2(long_param_name_______________) end
+
 return U

@@ -73,4 +73,28 @@ U.foo.baz()                                                          *U.foo.baz*
         (table)
 
 
+U.very_long_function_name____________()  *U.very_long_function_name____________*
+    Method with long name and signature just below tag spillover length
+
+
+                                        *U.very_long_function_name_____________*
+U.very_long_function_name_____________()
+    Method with long name and signature just above tag spillover length
+
+
+U.short_function_name1({long_param_name______________}) *U.short_function_name1*
+    Method with long param and signature just below tag spillover length
+
+    Parameters: ~
+        {long_param_name______________}  (string)
+
+
+                                                        *U.short_function_name2*
+U.short_function_name2({long_param_name_______________})
+    Method with long param and signature just above tag spillover length
+
+    Parameters: ~
+        {long_param_name_______________}  (string)
+
+
 

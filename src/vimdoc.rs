@@ -403,8 +403,9 @@ fn description(desc: &str, indent: usize) -> String {
 #[inline]
 fn header(name: &str, tag: &str) -> String {
     let len = name.len();
-    if len > 40 || tag.len() > 40 {
-        return format!("{:>w$}\n{}\n", format!("*{}*", tag), name, w = TW);
+    let tag_str = format!("*{}*", tag);
+    if len + tag_str.len() >= TW {
+        return format!("{:>w$}\n{}\n", tag_str, name, w = TW);
     }
-    format!("{}{:>w$}\n", name, format!("*{}*", tag), w = TW - len)
+    format!("{}{:>w$}\n", name, tag_str, w = TW - len)
 }
